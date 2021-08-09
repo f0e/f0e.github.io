@@ -116,11 +116,12 @@ const loadCircles = () => {
 
   try {
     const loadedCircles = JSON.parse(loadedCirclesJSON);
+
     for (const circleData of loadedCircles) {
       const circle = Object.assign(new Circle(), circleData);
       circles.push(circle);
     }
-    console.log('got circles', circles);
+
     return true;
   } catch (e) {
     return false;
