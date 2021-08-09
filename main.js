@@ -29,7 +29,6 @@ for (const elem of document.querySelectorAll('a')) {
 // circles
 const lerp = (a, b, t) => (1 - t) * a + t * b;
 
-let lastTime;
 let lastQuadrant = -1;
 
 const circleMax = 1;
@@ -88,27 +87,26 @@ let circles = [];
 
 const addCircle = () => circles.push(new Circle());
 
+let lastTime;
 function render(time) {
-  const delta = (time - lastTime) / 1000;
-  lastTime = time;
+  const delta = lastTime ? (time - lastTime) / 1000 : 1 / 60;
 
-  if (delta) {
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    for (let i = circles.length - 1; i >= 0; i--) {
-      const circle = circles[i];
-      circle.animate(delta);
-      circle.draw(ctx);
-      if (circle.dead()) {
-        circles.splice(i, 1);
-        addCircle();
-      }
+  for (let i = circles.length - 1; i >= 0; i--) {
+    const circle = circles[i];
+    circle.animate(delta);
+    circle.draw(ctx);
+    if (circle.dead()) {
+      circles.splice(i, 1);
+      addCircle();
     }
-
-    localStorage.setItem('circles', JSON.stringify(circles));
   }
 
+  localStorage.setItem('circles', JSON.stringify(circles));
+
+  lastTime = time;
   requestAnimationFrame(render);
 }
 
@@ -119,7 +117,8 @@ const loadCircles = () => {
   try {
     const loadedCircles = JSON.parse(loadedCirclesJSON);
     for (const circleData of loadedCircles) {
-      circles.push(Object.assign(new Circle(), circleData));
+      const circle = Object.assign(new Circle(), circleData);
+      circles.push(circle);
     }
     console.log('got circles', circles);
     return true;
