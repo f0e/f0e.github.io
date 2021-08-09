@@ -99,7 +99,7 @@ main.slide-out {
   opacity: 1;
 }
 
-.icon {
+#theme-switcher {
   position: absolute;
 
   bottom: 1rem;
@@ -112,6 +112,13 @@ main.slide-out {
   border-radius: 100%;
 
   cursor: pointer;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   transition: background-color 0.13s;
 }
