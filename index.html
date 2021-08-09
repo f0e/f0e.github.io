@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+
+  <title>f0e</title>
+  <meta name="description" content="f0e homepage">
+  
+  <link rel="preload" href="/fonts/garamond.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <link rel="stylesheet" href="/style.css">
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.className = theme;
+  </script>
+</head>
+<body class="light">
+  <canvas id="c"></canvas>
+  
+  <main>
+    <h1>welcome</h1>
+
+    <div class="links">
+      <div class="link"><a href="/blur">blur</a></div>
+      <div class="link"><a href="/crosshair">crosshair generator</a></div>
+    </div>
+
+    <div id="theme-switcher" class="icon"></div>
+  </main>
+</body>
+<script src="/main.js"></script>
+</html>

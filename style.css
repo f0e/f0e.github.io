@@ -1,0 +1,187 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'garamond';
+  src: url('fonts/garamond.woff2') format('woff2');
+}
+
+:root {
+  --mobile-main-padding: 2rem;
+  --slide-distance: 50px;
+}
+
+:root.light {
+  --background-colour: #fff;
+  --text-colour: #000;
+  --link-colour: #333;
+}
+
+:root.dark {
+  --background-colour: #000;
+  --text-colour: #fff;
+  --link-colour: #aaa;
+}
+
+#c {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--background-colour);
+  color: var(--text-colour);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  transition: background-color 0.2s, color 0.1s;
+}
+
+main {
+  position: relative;
+
+  padding: 2rem 2rem;
+
+  width: 25rem;
+  height: 17rem;
+
+  font-family: garamond;
+  font-weight: bold;
+
+  background-color: var(--background-colour);
+
+  border: 2px solid var(--text-colour);
+
+  animation: fade-in 0.5s;
+
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+main.slide-in {
+  transform: translate(var(--slide-distance));
+}
+
+main.slide-out {
+  transform: translate(calc(-1 * var(--slide-distance)));
+  opacity: 0;
+}
+
+.link > a {
+  color: var(--link-colour);
+  opacity: 0.75;
+
+  transition: opacity 0.05s;
+}
+
+.link > a:hover {
+  opacity: 1;
+}
+
+.icon {
+  position: absolute;
+
+  bottom: 1rem;
+  right: 1rem;
+
+  width: 2.3rem;
+  height: 2.3rem;
+
+  border: 2px solid var(--text-colour);
+  border-radius: 100%;
+
+  cursor: pointer;
+
+  transition: background-color 0.13s;
+}
+
+.icon:hover {
+  background-color: var(--text-colour);
+}
+
+.subtext {
+  opacity: 0.9;
+}
+
+.back:before {
+  content: '<';
+
+  display: inline-block;
+
+  margin-right: 0.5rem;
+
+  color: var(--text-colour);
+  opacity: 0.5;
+
+  cursor: pointer;
+
+  transform: scaleX(0.75);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    width: calc(100vw - var(--mobile-main-padding));
+    height: calc(100vh - var(--mobile-main-padding));
+  }
+
+  .links {
+    margin-top: 1rem;
+  }
+
+  .link {
+    border: 2px solid var(--link-colour);
+    padding: 1rem;
+
+    transition: border 0.05s;
+  }
+
+  .link:not(:last-child) {
+    margin-bottom: 0.7rem;
+  }
+
+  .link:hover {
+    border: 2px solid var(--text-colour);
+  }
+
+  .link > a {
+    text-decoration: none;
+  }
+}
