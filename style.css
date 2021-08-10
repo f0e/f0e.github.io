@@ -39,7 +39,7 @@
 }
 
 body {
-  padding: 0;
+  padding: 1rem;
   margin: 0;
 
   display: flex;
@@ -54,7 +54,7 @@ body {
 
   min-height: 100vh;
 
-  overflow: hidden;
+  overflow-x: hidden;
 
   transition: background-color 0.2s, color 0.1s;
 }
@@ -124,6 +124,15 @@ main.slide-out {
   opacity: 0.9;
 }
 
+.muted {
+  opacity: 0.5;
+}
+
+.list ul {
+  margin-top: 0;
+  padding-left: calc(1em + 1px);
+}
+
 .back:before {
   content: '<';
 
@@ -144,6 +153,11 @@ h2,
 h3,
 h4,
 h5 {
+  margin: 0;
+}
+
+p {
+  opacity: 0.9;
   margin: 0;
 }
 
