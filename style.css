@@ -116,7 +116,7 @@ main.slide-out {
   transition: background-color 0.13s;
 }
 
-.icon:hover {
+#theme-switcher:hover {
   background-color: var(--text-colour);
 }
 
@@ -170,7 +170,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px), screen and (max-height: 700px) {
   main {
     width: calc(100vw - var(--mobile-main-padding));
     padding-bottom: calc(2rem + 2.3rem); /* -_- (icon size + normal padding) */
