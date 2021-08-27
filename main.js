@@ -18,6 +18,7 @@ themeSwitcher.addEventListener('click', (e) => {
 // link animations
 for (const elem of document.querySelectorAll('a')) {
   if (elem.classList.contains('stay')) continue;
+  if (elem.hostname !== location.hostname) continue;
 
   elem.addEventListener('click', (e) => {
     e.preventDefault();
