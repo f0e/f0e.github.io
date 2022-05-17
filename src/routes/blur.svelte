@@ -1,0 +1,17 @@
+<h1><a class="back" href="/" />blur</h1>
+<p>
+	blur is a program made for easily and efficiently adding motion blur to videos through frame
+	blending.
+</p>
+
+<br />
+
+<nav class="links">
+	<div class="link">
+		<a href="https://github.com/f0e/blur/releases/latest">download</a>
+	</div>
+	<div class="link"><a href="https://github.com/f0e/blur">source code</a></div>
+	<div class="link">
+		<a href="https://www.youtube.com/watch?v=HicPaXNxtUw">video</a>
+	</div>
+</nav>
