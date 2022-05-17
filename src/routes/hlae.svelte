@@ -4,7 +4,7 @@
 <br />
 
 <div class="link"><a class="stay" href="cfg.zip">download</a></div>
-<p class="muted">last update:</p>
+<p class="muted">last update: 11 aug 2021</p>
 
 <br />
 
