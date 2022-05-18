@@ -1,7 +1,5 @@
 <script>
-	import { browser } from '$app/env';
 	import { onMount } from 'svelte';
-
 	import { theme } from '../stores';
 
 	let canvas;
@@ -9,6 +7,12 @@
 	let innerHeight = 0;
 
 	const lerp = (a, b, t) => (1 - t) * a + t * b;
+
+	const resize = () => {
+		if (!canvas) return;
+		canvas.width = innerWidth;
+		canvas.height = innerHeight;
+	};
 
 	let lastQuadrant = -1;
 
@@ -62,43 +66,7 @@
 		}
 	}
 
-	let circles = [];
-
-	const addCircle = () => circles.push(new Circle());
-
-	const loadCircles = () => {
-		const loadedCirclesJSON = localStorage.getItem('circles');
-		if (!loadedCirclesJSON) return false;
-
-		try {
-			const loadedCircles = JSON.parse(loadedCirclesJSON);
-
-			for (const circleData of loadedCircles) {
-				const circle = Object.assign(new Circle(), circleData);
-				circles.push(circle);
-			}
-
-			return true;
-		} catch (e) {
-			return false;
-		}
-	};
-
-	const resize = () => {
-		if (!canvas) return;
-		canvas.width = innerWidth;
-		canvas.height = innerHeight;
-	};
-
-	// if (document.referrer != location.href && document.referrer.indexOf(location.host) != -1) {
-	// 	// came from another page on the site
-	// 	loadCircles() || addCircle();
-
-	// 	main.classList.add('slide-in');
-	// 	setTimeout(() => main.classList.remove('slide-in'), 0);
-	// } else {
-	addCircle();
-	// }
+	let circles = [new Circle()];
 
 	onMount(() => {
 		const ctx = canvas.getContext('2d');
@@ -112,15 +80,12 @@
 
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-			for (let i = circles.length - 1; i >= 0; i--) {
-				const circle = circles[i];
-
+			for (const circle of circles) {
 				circle.animate(delta);
 				circle.draw(ctx);
 
 				if (circle.dead()) {
-					circles.splice(i, 1);
-					addCircle();
+					circle.reset();
 				}
 			}
 

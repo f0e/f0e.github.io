@@ -11,5 +11,9 @@
 	export let error, status;
 </script>
 
+<svelte:head>
+	<title>f0e / error</title>
+</svelte:head>
+
 <h1><a class="back" href="/" />{status}</h1>
 <p>{error.message.toLowerCase()}</p>

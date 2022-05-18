@@ -1,6 +1,5 @@
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>f0e</title>
 </svelte:head>
 
 <div>
