@@ -7,6 +7,7 @@
 
 	<nav class="links">
 		<div class="link"><a href="/blur">blur</a></div>
+		<div class="link"><a href="/archiver">youtube archiver</a></div>
 		<div class="link"><a href="/hlae">hlae configs</a></div>
 		<div class="link"><a href="/crosshair">crosshair generator</a></div>
 	</nav>
