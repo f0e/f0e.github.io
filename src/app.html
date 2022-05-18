@@ -3,7 +3,19 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		%svelte.head%
+
+		<!-- preload font to avoid font switching after loading -->
+		<link
+			rel="preload"
+			href="/fonts/EBGaramond-VariableFont_wght.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<!-- prevent dark theme flashing white -->
 		<script>
 			document.documentElement.className = localStorage.getItem('theme') ?? 'light';
 		</script>

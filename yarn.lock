@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"@fontsource/eb-garamond@^4.5.8":
-  version "4.5.8"
-  resolved "https://registry.yarnpkg.com/@fontsource/eb-garamond/-/eb-garamond-4.5.8.tgz#af879d502ce045f7a4b0c317c2065818d84b149e"
-  integrity sha512-RjSjojD5JvIYiRvmaei2E+dyVkiiBYthOQoIwLn9K6uStnjhXl00owlBZdrVLxc7dF7Hnu8J/OvIUguiLDWP/g==
-
 "@iarna/toml@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
