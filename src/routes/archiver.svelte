@@ -6,7 +6,7 @@
 	/>
 </svelte:head>
 
-<h1><a class="back" href="/" />youtube archiver</h1>
+<h1 class="title"><a class="back" href="/" />youtube archiver</h1>
 <p>archive youtube content and rehost it inside a clean modern interface.</p>
 
 <br />
@@ -21,7 +21,7 @@
 	<h3>features</h3>
 	<ul>
 		<li>
-			automatically discover new channels related to those that have been archived and add them to
+			automatically discovers new channels related to those that have been archived and adds them to
 			the list
 		</li>
 		<li>downloads videos at the highest possible quality and includes all metadata and comments</li>

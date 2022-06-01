@@ -136,9 +136,13 @@ p {
 	opacity: 1;
 }
 
+.title {
+	margin-bottom: 0.25rem;
+}
+
 @media only screen and (max-width: 600px), screen and (max-height: 700px) {
-	.links {
-		margin-top: 1rem;
+	.title {
+		margin-bottom: 0.5rem;
 	}
 
 	.link {

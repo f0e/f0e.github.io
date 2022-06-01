@@ -3,7 +3,7 @@
 	<meta name="description" content="HLAE configs for recording high-quality CS:GO clips" />
 </svelte:head>
 
-<h1><a class="back" href="/" />hlae configs</h1>
+<h1 class="title"><a class="back" href="/" />hlae configs</h1>
 <p>hlae configs for recording high-quality CS:GO clips using ffmpeg and streams.</p>
 
 <div style="margin-top: 0.5rem" />

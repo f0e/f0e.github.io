@@ -3,7 +3,7 @@
 </svelte:head>
 
 <div>
-	<h1>welcome</h1>
+	<h1 class="title welcome">welcome</h1>
 
 	<nav class="links">
 		<div class="link"><a href="/blur">blur</a></div>
@@ -12,3 +12,11 @@
 		<div class="link"><a href="/crosshair">crosshair generator</a></div>
 	</nav>
 </div>
+
+<style>
+	@media only screen and (max-width: 600px), screen and (max-height: 700px) {
+		.welcome {
+			margin-bottom: 1rem;
+		}
+	}
+</style>
