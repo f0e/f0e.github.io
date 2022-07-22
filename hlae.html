@@ -5,14 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<meta http-equiv="content-security-policy" content=""><title>f0e / hlae configs</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh"><meta name="description" content="HLAE configs for recording high-quality CS:GO clips" data-svelte="svelte-k4swwg">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-64a00a4f.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-e070558b.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/Title-0f2ff2e2.css">
-	<link rel="modulepreload" href="/_app/immutable/start-4382865e.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-33171326.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-bd934e56.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-97fdee9b.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/hlae.svelte-f13a43b4.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/Title-7589e6bd.js">
+	<link rel="modulepreload" href="/_app/immutable/start-6363b1d0.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-2c79f71d.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-61fd51b3.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-73c2ad87.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/hlae.svelte-72d81eab.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Title-e35d7817.js">
 
 		<!-- preload font to avoid font switching after loading -->
 		<link
@@ -25,6 +25,12 @@
 
 		<!-- prevent dark theme flashing white -->
 		<script>
+			if (!localStorage.getItem('theme')) {
+				// first load, get system preference
+				const dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				localStorage.setItem('theme', dark ? 'dark' : 'light');
+			}
+
 			document.documentElement.className = localStorage.getItem('theme') ?? 'light';
 		</script>
 	</head>
@@ -79,7 +85,7 @@
 
 
 		<script type="module" data-sveltekit-hydrate="n73pfh">
-		import { start } from "/_app/immutable/start-4382865e.js";
+		import { start } from "/_app/immutable/start-6363b1d0.js";
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="n73pfh"]').parentNode,
 			paths: {"base":"","assets":""},
