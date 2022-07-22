@@ -16,15 +16,16 @@
 		width: 2.3rem;
 		height: 2.3rem;
 
-		border: 2px solid var(--text-colour);
+		border: 2px solid var(--card-border);
 		border-radius: 100%;
 
 		cursor: pointer;
 
-		transition: background-color 0.13s;
+		transition: background-color 0.13s, border-color 0.13s;
 	}
 
 	.theme-switcher:hover {
 		background-color: var(--text-colour);
+		border-color: var(--text-colour);
 	}
 </style>

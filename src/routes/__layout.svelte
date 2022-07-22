@@ -16,10 +16,10 @@
 
 <Circles />
 
-<!-- <PageTransition url={$page.url}> -->
 <main>
-	<slot />
+	<PageTransition url={$page.url}>
+		<slot />
+	</PageTransition>
 
 	<ThemeSwitcher />
 </main>
-<!-- </PageTransition> -->

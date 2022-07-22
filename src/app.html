@@ -4,12 +4,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		%svelte.head%
+		%sveltekit.head%
 
 		<!-- preload font to avoid font switching after loading -->
 		<link
 			rel="preload"
-			href="/fonts/EBGaramond-VariableFont_wght.ttf"
+			href="%sveltekit.assets%/fonts/EBGaramond-VariableFont_wght.ttf"
 			as="font"
 			type="font/ttf"
 			crossorigin
@@ -21,6 +21,6 @@
 		</script>
 	</head>
 	<body>
-		<div>%svelte.body%</div>
+		<div>%sveltekit.body%</div>
 	</body>
 </html>

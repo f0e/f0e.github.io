@@ -16,12 +16,20 @@
 
 :root.light {
 	--background-colour: #fff;
+	
+	--card-colour: #fff;
+	--card-border: #000;
+
 	--text-colour: #000;
 	--link-colour: #333;
 }
 
 :root.dark {
 	--background-colour: #000;
+
+	--card-colour: #000;
+	--card-border: #bbb;
+
 	--text-colour: #fff;
 	--link-colour: #aaa;
 }
@@ -59,13 +67,11 @@ main {
 	width: 25rem;
 	min-height: 17rem;
 
-	background-color: var(--background-colour);
+	background-color: var(--card-colour);
 
-	border: 2px solid var(--text-colour);
+	border: 2px solid var(--card-border);
 
 	animation: fade-in 0.5s;
-
-	transition: transform 0.2s, opacity 0.2s;
 }
 
 .subtext {
@@ -79,21 +85,6 @@ main {
 .list ul {
 	margin-top: 0;
 	padding-left: calc(1em + 1px);
-}
-
-.back:before {
-	content: '<';
-
-	display: inline-block;
-
-	margin-right: 0.5rem;
-
-	color: var(--text-colour);
-	opacity: 0.5;
-
-	cursor: pointer;
-
-	transform: scaleX(0.75);
 }
 
 h1,

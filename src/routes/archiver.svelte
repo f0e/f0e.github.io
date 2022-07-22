@@ -1,3 +1,7 @@
+<script>
+	import Title from '$lib/Title.svelte';
+</script>
+
 <svelte:head>
 	<title>f0e / youtube archiver</title>
 	<meta
@@ -6,7 +10,7 @@
 	/>
 </svelte:head>
 
-<h1 class="title"><a class="back" href="/" />youtube archiver</h1>
+<Title text="youtube archiver" />
 <p>archive youtube content and rehost it inside a clean modern interface.</p>
 
 <br />

@@ -1,9 +1,13 @@
+<script>
+	import Title from '$lib/Title.svelte';
+</script>
+
 <svelte:head>
 	<title>f0e / blur</title>
 	<meta name="description" content="Add motion blur to videos" />
 </svelte:head>
 
-<h1 class="title"><a class="back" href="/" />blur</h1>
+<Title text="blur" />
 <p>
 	blur is a program made for easily and efficiently adding motion blur to videos through frame
 	blending.
