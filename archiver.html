@@ -5,17 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<meta http-equiv="content-security-policy" content=""><title>f0e / youtube archiver</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh"><meta name="description" content="Archive YouTube content and rehost it inside a clean modern interface" data-svelte="svelte-d6f6l6">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-874d39bd.css">
-	<link rel="modulepreload" href="/_app/start-d133d4d0.js">
-	<link rel="modulepreload" href="/_app/chunks/index-d1261f6c.js">
-	<link rel="modulepreload" href="/_app/chunks/index-da0413c8.js">
-	<link rel="modulepreload" href="/_app/pages/__layout.svelte-bdc1aeb5.js">
-	<link rel="modulepreload" href="/_app/pages/archiver.svelte-df39c5f2.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-57e99786.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/Title-0f2ff2e2.css">
+	<link rel="modulepreload" href="/_app/immutable/start-6e08e918.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-33171326.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-bd934e56.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-97fdee9b.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/archiver.svelte-10f6b82b.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Title-7589e6bd.js">
 
 		<!-- preload font to avoid font switching after loading -->
 		<link
 			rel="preload"
-			href="/fonts/EBGaramond-VariableFont_wght.ttf"
+			href="./fonts/EBGaramond-VariableFont_wght.ttf"
 			as="font"
 			type="font/ttf"
 			crossorigin
@@ -34,12 +36,13 @@
 
 
 
-<canvas class="circles svelte-2txu5t"></canvas>
+<canvas class="circles svelte-1x3wde3"></canvas>
 
+<main><div>
 
-<main>
-
-<h1 class="title"><a class="back" href="/"></a>youtube archiver</h1>
+<h1 class="title"><a class="back svelte-88p77o" href="/">&lt;
+	</a>youtube archiver
+</h1>
 <p>archive youtube content and rehost it inside a clean modern interface.</p>
 
 <br>
@@ -53,16 +56,15 @@
 			the list
 		</li>
 		<li>downloads videos at the highest possible quality and includes all metadata and comments</li>
-		<li>automatically re-scans all channels periodically to find new videos</li></ul></div>
+		<li>automatically re-scans all channels periodically to find new videos</li></ul></div></div>
 
-	<div class="theme-switcher svelte-11m9nqe"></div></main>
+	<div class="theme-switcher svelte-1qroyjf"></div></main>
 
 
-
-		<script type="module" data-hydrate="i40udd">
-		import { start } from "/_app/start-d133d4d0.js";
+		<script type="module" data-sveltekit-hydrate="endefy">
+		import { start } from "/_app/immutable/start-6e08e918.js";
 		start({
-			target: document.querySelector('[data-hydrate="i40udd"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="endefy"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -71,10 +73,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [
-					import("/_app/pages/__layout.svelte-bdc1aeb5.js"),
-						import("/_app/pages/archiver.svelte-df39c5f2.js")
-				],
+				nodes: [0, 2],
 				params: {},
 				routeId: "archiver"
 			}
