@@ -8,12 +8,6 @@
 
 	const lerp = (a, b, t) => (1 - t) * a + t * b;
 
-	const resize = () => {
-		if (!canvas) return;
-		canvas.width = innerWidth;
-		canvas.height = innerHeight;
-	};
-
 	let lastQuadrant = -1;
 
 	const circleSpeed = 1;
@@ -78,6 +72,10 @@
 			lastTime = time;
 			frame = requestAnimationFrame(render);
 
+			// update canvas size (resize event is inconsistent)
+			canvas.width = innerWidth;
+			canvas.height = innerHeight;
+
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 			for (const circle of circles) {
@@ -88,11 +86,7 @@
 					circle.reset();
 				}
 			}
-
-			// localStorage.setItem('circles', JSON.stringify(circles));
 		}
-
-		resize();
 
 		return () => {
 			cancelAnimationFrame(frame);
@@ -100,7 +94,7 @@
 	});
 </script>
 
-<svelte:window on:resize={resize} bind:innerWidth bind:innerHeight />
+<svelte:window bind:innerWidth bind:innerHeight />
 
 <canvas class="circles" bind:this={canvas} />
 
