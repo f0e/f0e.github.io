@@ -6,10 +6,18 @@
 
 		%sveltekit.head%
 
-		<!-- preload font to avoid font switching after loading -->
+		<!-- preload fonts to avoid font switching after loading -->
 		<link
 			rel="preload"
-			href="%sveltekit.assets%/fonts/EBGaramond-VariableFont_wght.ttf"
+			href="%sveltekit.assets%/fonts/EBGaramond-SemiBold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<link
+			rel="preload"
+			href="%sveltekit.assets%/fonts/EBGaramond-Medium.ttf"
 			as="font"
 			type="font/ttf"
 			crossorigin
