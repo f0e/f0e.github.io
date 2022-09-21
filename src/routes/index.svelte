@@ -6,8 +6,12 @@
 	<h1 class="title welcome">welcome</h1>
 
 	<nav class="links">
+		<b>applications</b>
 		<div class="link"><a href="/blur">blur</a></div>
 		<div class="link"><a href="/archiver">youtube archiver</a></div>
+		<br />
+		<b>csgo tools</b>
+		<div class="link"><a href="/clipper">clipper</a></div>
 		<div class="link"><a href="/hlae">hlae configs</a></div>
 		<div class="link"><a href="/crosshair">crosshair generator</a></div>
 	</nav>
