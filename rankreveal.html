@@ -4,14 +4,14 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<meta http-equiv="content-security-policy" content=""><title>f0e / blur</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh"><meta name="description" content="Add motion blur to videos" data-svelte="svelte-n9gy5z">
+		<meta http-equiv="content-security-policy" content=""><title>f0e / rank reveal</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh"><meta name="description" content="Simple cheat-free rank revealer for CS:GO" data-svelte="svelte-1p5hkyf">
 	<link rel="stylesheet" href="/_app/immutable/assets/__layout-fd36e8d8.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/Title-0f2ff2e2.css">
 	<link rel="modulepreload" href="/_app/immutable/start-e43d02b7.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-2c79f71d.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-61fd51b3.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-73c2ad87.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/blur.svelte-b2a6ef15.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/rankreveal.svelte-67874579.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/Title-e35d7817.js">
 
 		<!-- preload fonts to avoid font switching after loading -->
@@ -55,25 +55,33 @@
 <main><div>
 
 <h1 class="title"><a class="back svelte-88p77o" href="/">&lt;
-	</a>blur
+	</a>rank reveal
 </h1>
-<p>blur is a program made for easily and efficiently adding motion blur to videos through frame
-	blending.
+<p>this is a super simple csgo rank revealer that is completely safe to use.</p>
+
+<br>
+
+<p>by utilising the <code>-netconport</code> launch option, you can get a list of the players in the
+	current server by reading the console output of the <code>status</code> command.
 </p>
 
 <br>
 
-<nav class="links"><div class="link"><a href="https://github.com/f0e/blur">homepage</a></div>
-	<div class="link"><a href="https://github.com/f0e/blur/releases/latest">download</a></div>
-	<div class="link"><a href="https://www.youtube.com/watch?v=HicPaXNxtUw">video</a></div></nav></div>
+<p>using this player list i check each player on <a href="csgostats.gg">csgostats.gg</a> to find their
+	rank.
+</p>
+
+<br>
+
+<nav class="links"><div class="link"><a href="https://github.com/f0e/csgo-rank-reveal">homepage</a></div></nav></div>
 
 	<div class="theme-switcher svelte-1qroyjf"></div></main>
 
 
-		<script type="module" data-sveltekit-hydrate="1kni4nw">
+		<script type="module" data-sveltekit-hydrate="1st7c9x">
 		import { start } from "/_app/immutable/start-e43d02b7.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1kni4nw"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="1st7c9x"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -82,9 +90,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
+				nodes: [0, 7],
 				params: {},
-				routeId: "blur"
+				routeId: "rankreveal"
 			}
 		});
 	</script></div>
