@@ -123,6 +123,10 @@ p {
 	}
 }
 
+a {
+	color: inherit;
+}
+
 .link {
 	> a {
 		color: var(--link-colour);
