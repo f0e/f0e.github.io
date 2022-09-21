@@ -4,14 +4,15 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<meta http-equiv="content-security-policy" content=""><title>f0e</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh">
+		<meta http-equiv="content-security-policy" content=""><title>f0e / clipper</title><meta name="color-scheme" content="false" data-svelte="svelte-1t0jwfh"><meta name="description" content="Automatic POV demo recording tool for CS:GO" data-svelte="svelte-qsodgn">
 	<link rel="stylesheet" href="/_app/immutable/assets/__layout-da6ef508.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/index-b62a1b55.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/Title-0f2ff2e2.css">
 	<link rel="modulepreload" href="/_app/immutable/start-1fd540b8.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-2c79f71d.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-61fd51b3.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-73c2ad87.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/index.svelte-ec8544ec.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/clipper.svelte-0b0ba97f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/Title-e35d7817.js">
 
 		<!-- preload fonts to avoid font switching after loading -->
 		<link
@@ -53,25 +54,36 @@
 
 <main><div>
 
-<div><h1 class="title welcome svelte-1u9i7xg">welcome</h1>
+<h1 class="title"><a class="back svelte-88p77o" href="/">&lt;
+	</a>clipper
+</h1>
+<p>clipper is a pov demo recording and management tool for csgo.</p>
 
-	<nav class="links"><b>applications</b>
-		<div class="link"><a href="/blur">blur</a></div>
-		<div class="link"><a href="/archiver">youtube archiver</a></div>
-		<br>
-		<b>csgo tools</b>
-		<div class="link"><a href="/clipper">clipper</a></div>
-		<div class="link"><a href="/hlae">hlae configs</a></div>
-		<div class="link"><a href="/crosshair">crosshair generator</a></div></nav>
-</div></div>
+<div style="margin-top: 0.5rem"></div>
+
+<div class="list"><h3>modes</h3>
+	<ul><li>archiver</li>
+		<span class="muted">automatically record every match you play</span>
+
+		<li>clipper</li>
+		<span class="muted">record specific rounds in a game using a shadowplay-like clipping system</span></ul></div>
+
+<p>you can also view and manage all of your demos through a web interface, which makes organising
+	them easier than working directly with files.
+</p>
+
+<br>
+
+<nav class="links"><div class="link"><a href="https://github.com/f0e/clipper">homepage</a></div>
+	<div class="link"><a href="https://github.com/f0e/clipper/releases/latest">download</a></div></nav></div>
 
 	<div class="theme-switcher svelte-1qroyjf"></div></main>
 
 
-		<script type="module" data-sveltekit-hydrate="1vvu4lr">
+		<script type="module" data-sveltekit-hydrate="mmzt6m">
 		import { start } from "/_app/immutable/start-1fd540b8.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1vvu4lr"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="mmzt6m"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -80,9 +92,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 6],
+				nodes: [0, 4],
 				params: {},
-				routeId: ""
+				routeId: "clipper"
 			}
 		});
 	</script></div>
