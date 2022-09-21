@@ -12,7 +12,7 @@
 		<br />
 		<b>csgo tools</b>
 		<div class="link"><a href="/clipper">clipper</a></div>
-		<div class="link"><a href="/rankreveal">rank reveal</a></div>
+		<div class="link"><a href="/rank-reveal">rank reveal</a></div>
 		<div class="link"><a href="/hlae">hlae configs</a></div>
 		<div class="link"><a href="/crosshair">crosshair generator</a></div>
 	</nav>
