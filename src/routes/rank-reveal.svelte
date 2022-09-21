@@ -20,8 +20,8 @@
 <br />
 
 <p>
-	using this player list i check each player on <a href="csgostats.gg">csgostats.gg</a> to find their
-	rank.
+	using this player list i check each player on <a href="https://csgostats.gg">csgostats.gg</a> to find
+	their rank.
 </p>
 
 <br />
