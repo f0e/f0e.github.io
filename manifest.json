@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "_app/immutable/start-c0d4f649.js",
+    "file": "_app/immutable/start-1bf0dd5e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -81,7 +81,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "_app/immutable/pages/index.svelte-6286ae21.js",
+    "file": "_app/immutable/pages/index.svelte-51f41da7.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -89,7 +89,7 @@
       "_index-2c79f71d.js"
     ],
     "css": [
-      "_app/immutable/assets/index-b62a1b55.css"
+      "_app/immutable/assets/index-c015a381.css"
     ]
   },
   "src/routes/rank-reveal.svelte": {
@@ -129,7 +129,7 @@
     "src": "Title.css"
   },
   "src/routes/index.css": {
-    "file": "_app/immutable/assets/index-b62a1b55.css",
+    "file": "_app/immutable/assets/index-c015a381.css",
     "src": "src/routes/index.css"
   }
 }
