@@ -34,6 +34,15 @@
   <p class="text-neutral-500">Unavailable (needs JavaScript)</p>
 </noscript>
 
+{#snippet albumMeta(album: Album)}
+  <p class="font-semibold text-sm mb-1 line-clamp-4">
+    {album.name}
+  </p>
+  <p class="text-xs text-neutral-300 mb-1 line-clamp-4">
+    {album.artist.name}
+  </p>
+{/snippet}
+
 <div class="requires-js">
   {#if error}
     <p class="text-red-600">{error}</p>
@@ -66,8 +75,7 @@
             <div
               class="w-full h-full flex flex-col items-center justify-center text-center text-neutral-300"
             >
-              <p>{album.name}</p>
-              <p class="opacity-50">{album.artist.name}</p>
+              {@render albumMeta(album)}
             </div>
           {/if}
 
@@ -75,10 +83,7 @@
             class="absolute inset-0 bg-black opacity-0 group-hover:opacity-90 flex items-center justify-center p-4"
           >
             <div class="text-center text-white pointer-events-none">
-              <p class="font-semibold text-sm mb-1">{album.name}</p>
-              <p class="text-xs text-neutral-300 mb-1">
-                {album.artist.name}
-              </p>
+              {@render albumMeta(album)}
               <p class="text-xs text-neutral-400">
                 {album.playcount} plays
               </p>
